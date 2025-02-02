@@ -43,9 +43,9 @@ bool ciclo_callback(repeating_timer_t *t) {
         ativado = 1;
         break;
     case 1:
-        gpio_put(LED_AM, 1);
-        //gpio_put(LED_VM, 1);
-        //gpio_put(LED_VD, 1);
+        //gpio_put(LED_AM, 1);
+        gpio_put(LED_VM, 1);
+        gpio_put(LED_VD, 1);
         printf("LED AMARELA\n");
         ativado = 2;    
         break;

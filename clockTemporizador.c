@@ -26,10 +26,11 @@ int main()
 
     while (true) {
         printf("Semáfaro funcionando...\n");
-        sleep_ms(1000);  // Espera 1 segundo
+        sleep_ms(1000);  
     }
 }
 
+//indica qual led acender
 bool ciclo_callback(repeating_timer_t *t) {
 
     gpio_put(LED_VM, 0);
@@ -43,7 +44,6 @@ bool ciclo_callback(repeating_timer_t *t) {
         ativado = 1;
         break;
     case 1:
-        //gpio_put(LED_AM, 1);
         gpio_put(LED_VM, 1);
         gpio_put(LED_VD, 1);
         printf("LED AMARELA\n");
